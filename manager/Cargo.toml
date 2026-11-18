@@ -1,0 +1,30 @@
+[package]
+name = "pool-status-manager"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+description = "Blend pool admin with two roles: an owner with every admin power, and an operator that can only set pool status. Built on OpenZeppelin Stellar Contracts."
+repository = "https://github.com/BLNT-Protocol/pool-status-admin"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = "25.3.0"
+stellar-access = "=0.7.0"
+stellar-macros = "=0.7.0"
+
+[dev-dependencies]
+soroban-sdk = { version = "25.3.0", features = ["testutils"] }
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
