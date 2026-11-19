@@ -1,0 +1,4 @@
+[toolchain]
+channel = "1.91.1"          # pinned so a release can be rebuilt bit-for-bit
+targets = ["wasm32v1-none"]
+components = ["rustfmt", "clippy", "rust-src"]

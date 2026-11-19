@@ -61,3 +61,9 @@ make fmt
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## Pool Status Manager
+
+[`manager/`](manager/) holds a separate contract, `pool-status-manager`: an
+owner with every pool admin power plus an operator limited to the status.  It
+is released under `manager-v*` tags and does not change this contract.
